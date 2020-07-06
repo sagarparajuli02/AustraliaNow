@@ -1,24 +1,252 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
 <LinearLayout
     android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@drawable/weather_background"
-  android:orientation="vertical"
-    tools:ignore="MissingConstraints" />
-   <TextView
-       android:text="This is a Test"
-       android:layout_height="wrap_content"
-       android:layout_width="wrap_content"
-       android:textSize="18dp"
-       android:textColor="#fff"
+    android:layout_margin="5dp"
 
-       android:gravity="center_horizontal" />
-    />
-</androidx.constraintlayout.widget.ConstraintLayout>
+>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/weather_background">
+
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="25dp"
+            android:src="@drawable/cloud" />
+
+        <TextView
+            android:id="@+id/temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weatherIcon"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="20  C"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/dayType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/temperature"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Rainny Day"
+            android:textColor="#fff"
+
+            android:textSize="25dp"
+            android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+
+            android:layout_toRightOf="@+id/weatherIcon"
+            android:text="June 30"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date"
+            android:layout_centerInParent="true"
+
+            android:layout_toRightOf="@+id/weatherIcon"
+            android:text="Sunday"
+            android:textColor="#fff"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:src="@drawable/ad"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:src="@drawable/horescope"
+            text
+            />
+        <ImageView
+            android:layout_weight="1"
+
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/newspaper"
+            />
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/video"
+            />
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_radio"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+<androidx.cardview.widget.CardView
+    android:layout_weight="1"
+    android:layout_width="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#f1453d"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_margin="10dp"
+        android:drawableTop="@drawable/horescope"
+        android:layout_gravity="center"
+        android:text="Test"
+
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:src="@drawable/horescope"
+        android:layout_height="wrap_content">
+</androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#9b2fae"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:drawableTop="@drawable/horescope"
+                    android:layout_gravity="center"
+                    android:text="Test"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/horescope"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="#4054b2"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:drawableTop="@drawable/horescope"
+                    android:layout_gravity="center"
+                    android:text="Test"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/horescope"
+                    android:layout_height="wrap_content">
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#159588"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:drawableTop="@drawable/horescope"
+                    android:layout_gravity="center"
+                    android:text="Test"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/horescope"
+                    android:layout_height="wrap_content">
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:drawableTop="@drawable/horescope"
+                    android:layout_gravity="center"
+                    android:text="Test"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/horescope"
+                    android:layout_height="wrap_content">
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:background="#fff"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_margin="10dp"
+                    android:drawableTop="@drawable/horescope"
+                    android:layout_gravity="center"
+                    android:text="Test"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/horescope"
+                    android:layout_height="wrap_content">
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
