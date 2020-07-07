@@ -2,7 +2,10 @@ package com.australia.now;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -13,6 +16,7 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 public class MainActivity extends AppCompatActivity {
 
     private AdView mAdView,adBottom;
+    TextView horescope,news,radio,video;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         getSupportActionBar().setElevation(0);
 
-        // loading banner ad
+        // Loading banner ADs....
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
@@ -33,5 +37,44 @@ public class MainActivity extends AppCompatActivity {
         adBottom=findViewById(R.id.adViewBottom);
         AdRequest adRequestBottom = new AdRequest.Builder().build();
         adBottom.loadAd(adRequestBottom);
+
+        //ADs code finisd=hes here....
+        // Start main code from here
+
+        horescope=(TextView)findViewById(R.id.horscope);
+        radio=(TextView)findViewById(R.id.radio);
+        video=(TextView)findViewById(R.id.video);
+        news=(TextView)findViewById(R.id.news);
+
+
+        horescope.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent horscope=new Intent(MainActivity.this,HorescopeActivity.class);
+                startActivity(horscope);
+            }
+        });
+        video.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent video=new Intent(MainActivity.this,VideoActivity.class);
+                startActivity(video);
+            }
+        });
+        news.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent news=new Intent(MainActivity.this,VideoActivity.class);
+                startActivity(news);
+            }
+        });
+        radio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent radio=new Intent(MainActivity.this,RadioActivity.class);
+                startActivity(radio);
+            }
+        });
+
     }
 }

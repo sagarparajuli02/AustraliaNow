@@ -119,6 +119,7 @@
             android:layout_height="75dp"
             android:textColor="#000"
             android:gravity="center"
+            android:id="@+id/horscope"
             android:layout_weight="1"
             android:drawableTop="@drawable/horescope"
             android:text="Horescope"
@@ -132,6 +133,7 @@
             android:gravity="center"
             android:layout_weight="1"
             android:text="News"
+            android:id="@+id/news"
             android:drawableTop="@drawable/newspaper" />
 
         <TextView
@@ -141,6 +143,7 @@
             android:textColor="#000"
             android:gravity="center"
             android:text="Radio"
+            android:id="@+id/radio"
             android:drawableTop="@drawable/radio"
             />
         <TextView
@@ -150,6 +153,7 @@
             android:textColor="#000"
             android:gravity="center"
             android:text="Video"
+            android:id="@+id/video"
 
             android:drawableTop="@drawable/video"
             />
